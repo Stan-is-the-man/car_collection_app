@@ -53,10 +53,11 @@
                 <p class="description">Age: {{ profile.age }}</p>
                 <!-- total price of all cars -->
                 <p class="description">Total price: {{ total_price_count|floatformat:3 }}</p>
+
                 <!-- Edit/Delete buttons -->
                 <div class="buttons">
                     <a href="{% url 'profile edit' %}" class="edit-button">Edit</a>
-                    <a href="{% url 'profile delete'%} }" class="delete-button">Delete</a>
+                    <a href="{% url 'profile delete' %} " class="delete-button">Delete</a>
                 </div>
             </div>
         </div>
