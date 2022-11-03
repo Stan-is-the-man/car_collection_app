@@ -1,3 +1,5 @@
+
+from django import forms
 from django.core.validators import MinValueValidator, MinLengthValidator
 from django.db import models
 
@@ -31,6 +33,8 @@ class Profile(models.Model):
 
     password = models.CharField(
         max_length=PASSWORD_MAX_LEN,
+
+
     )
 
     first_name = models.CharField(
