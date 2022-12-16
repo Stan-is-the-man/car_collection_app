@@ -12,27 +12,16 @@ class CrateProfileForm(forms.ModelForm):
         }
 
 
-
 class EditProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = '__all__'
-
-    widgets = {
-        'username': forms.TextInput(attrs={'placeholder': 'Username'}),
-
-        'email': forms.EmailInput(attrs={'placeholder': 'Email'}),
-
-        'age': forms.NumberInput(attrs={'placeholder': 'Age'}),
-
-        'password': forms.PasswordInput(attrs={'placeholder': 'Password'}),
-
-        'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
-
-        'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
-
-        'profile_picture': forms.URLInput(attrs={'placeholder': 'Profile Picture'}),
-    }
+        # labels = {
+        #     'first_name': 'First Name',
+        #     'last_name': 'Last Name',
+        #     'profile_picture': 'Profile Picture',
+        #
+        # }
 
 
 class DeleteProfileForm(forms.ModelForm):
@@ -65,21 +54,18 @@ class EditCarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = '__all__'
+        labels = {
+            'type': 'Type',
+            'model': 'Model',
+            'year': 'Year',
+            'image_url': 'Image URL',
+            'price': 'Price',
 
-    widgets = {
-        'type': forms.TextInput(attrs={'placeholder': 'Type'}),
-
-        'model': forms.TextInput(attrs={'placeholder': 'Model'}),
-
-        'year': forms.NumberInput(attrs={'placeholder': 'Year'}),
-
-        'image_url': forms.URLInput(attrs={'placeholder': 'Image URL'}),
-
-        'price': forms.NumberInput(attrs={'placeholder': 'Price'}),
-    }
+        }
 
 
 class DeleteCarForm(forms.ModelForm):
+    # readonly words in the fields
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for _, field in self.fields.items():
@@ -92,15 +78,11 @@ class DeleteCarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = '__all__'
+        labels = {
+            'type': 'Type',
+            'model': 'Model',
+            'year': 'Year',
+            'image_url': 'Image URL',
+            'price': 'Price',
 
-    widgets = {
-        'type': forms.TextInput(attrs={'placeholder': 'Type'}),
-
-        'model': forms.TextInput(attrs={'placeholder': 'Model'}),
-        # NUmberINput            !!!!!!!!!!!!!!!!!!!!!!!!!!
-        'year': forms.NumberInput(attrs={'placeholder': 'Year'}),
-
-        'image_url': forms.URLInput(attrs={'placeholder': 'Image URL'}),
-
-        'price': forms.NumberInput(attrs={'placeholder': 'Price'}),
-    }
+        }

@@ -56,7 +56,7 @@ def car_create(request):
         form = CreateCarForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('catalogue')
+            return redirect('index')
     else:
         form = CreateCarForm()
 

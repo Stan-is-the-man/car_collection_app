@@ -10,9 +10,10 @@ body{
     margin: 3em auto;
 }
 
+/*#0D223A*/
 header,
 footer {
-    background-color: #0D223A;
+    background-color: darkgrey;
     width: 100%;
     overflow: hidden;
     color: white;
@@ -42,7 +43,7 @@ header h1 {
 
 
 h1 span{
-    color: #3387C7;
+    color: sandybrown; /*#3387C7*/
 }
 
 header nav {

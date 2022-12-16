@@ -40,12 +40,15 @@
                 <!-- user full name (if any) -->
                 {% if profile.first_name and profile.last_name %}
                     <h1>{{ profile.full_name }}</h1>
-                    <!-- user username -->
+
                 {% elif profile.first_name and not profile.last_name %}
                     <p class="description">Username: {{ profile.first_name }}</p>
                 {% elif not profile.first_name and profile.last_name %}
                     <p class="description">Username: {{ profile.last_name }}</p>
                 {% endif %}
+
+             <!-- user username -->
+             <p class="description">Username: {{ profile.username }}</p>
 
                 <!-- user email -->
                 <p class="description">Email: {{ profile.email }}</p>
